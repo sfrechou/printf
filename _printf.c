@@ -61,7 +61,7 @@ void _printf(const char * const format, ...)
 		}
 		else
 		{
-			putchar(format[i]);
+			_putchar(format[i]);
 			i++;
 		}
 		j = 0;
@@ -78,7 +78,7 @@ void _printf(const char * const format, ...)
  */
 void printchar(va_list arguments)
 {
-	putchar(va_arg(arguments, int));
+	_putchar(va_arg(arguments, int));
 }
 
 /**
@@ -94,10 +94,10 @@ void printstring(va_list arguments)
 	char *string;
 
 	string = va_arg(arguments, char *);
-	length = strlen(string);
+	length = _strlen(string);
 	for (k = 0; k < length; k++)
 	{
-		putchar(string[k]);
+		_putchar(string[k]);
 	}
 }
 
@@ -111,7 +111,7 @@ void printstring(va_list arguments)
 void printpercent(va_list arguments)
 {
 	(void)arguments;
-	putchar('%');
+	_putchar('%');
 }
 
 /**
@@ -127,7 +127,7 @@ void printint(va_list arguments)
 	n = va_arg(arguments, int);
 	if (n < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		n *= -1;
 	}
 	_printint(n);
@@ -146,7 +146,7 @@ void printdecimal(va_list arguments)
 	n = va_arg(arguments, int);
 	if (n < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		n *= -1;
 	}
 	_printint(n);
@@ -163,7 +163,7 @@ void _printint(int n)
 	{
 		_printint(n / 10);
 	}
-	putchar((n % 10) + '0');
+	_putchar((n % 10) + '0');
 }
 
 /**

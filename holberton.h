@@ -7,11 +7,11 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-void printchar(va_list list);
-void printstring(va_list list);
-void printpercent(va_list list);
-void printint(va_list list);
-void _printint(int n);
+int printchar(va_list list);
+int printstring(va_list list);
+int printpercent(va_list list);
+int printint(va_list list);
+int _printint(int n);
 int _putchar(char c);
 int _strlen(char *s);
 int _printf(const char *format, ...);

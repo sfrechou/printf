@@ -11,7 +11,7 @@ int printchar(va_list list);
 int printstring(va_list list);
 int printpercent(va_list list);
 int printint(va_list list);
-int _printint(int n);
+int _printint(int bytes, int n);
 int _putchar(char c);
 int _strlen(char *s);
 int _printf(const char *format, ...);

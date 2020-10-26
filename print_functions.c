@@ -80,7 +80,7 @@ int _printint(int bytes, int n)
 {
 	if ((n / 10) > 0)
 	{
-		_printint(n / 10);
+		_printint(bytes, (n / 10));
 	}
 	bytes++;
 	_putchar((n % 10) + '0');

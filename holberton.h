@@ -25,7 +25,7 @@ int _printf(const char *format, ...);
 typedef struct gen_format
 {
 	char *caracter;
-	void (*f)();
+	int (*f)();
 } print_format;
 
 #endif

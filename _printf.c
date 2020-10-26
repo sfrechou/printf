@@ -52,6 +52,7 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			i++;
 			bytes++;
+			printf("%d\n", bytes);
 		}
 		j = 0;
 	}

@@ -85,5 +85,6 @@ int _printint(int bytes, int n)
 	}
 	bytes++;
 	_putchar((n % 10) + '0');
+	printf("Bytes en _printint %d\n", bytes);
 	return (bytes);
 }

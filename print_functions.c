@@ -65,35 +65,42 @@ int printint(va_list arguments)
 	int i, n, s, bytes = 0, cont = 0, r = 0;
 
 	n = va_arg(arguments, int);
-	if (n == 0)
+	if (n >= INT_MIN && n <= INT_MAX)
 	{
-		_putchar('0');
-		bytes++;
+		if (n == 0)
+		{
+			_putchar('0');
+			bytes++;
+		}
+		if (n < 0)
+		{
+			_putchar('-');
+			n *= -1;
+			bytes++;
+		}
+		s = n;
+		while ((n / 10) > 0)
+		{
+			cont++;
+			n /= 10;
+		}
+		cont++;
+		while (s != 0)
+		{
+			r = r * 10;
+			r = r + s % 10;
+			s = s / 10;
+			bytes++;
+		}
+		for (i = 0; i < cont; i++, r /= 10)
+		{
+			_putchar((r % 10) + '0');
+			bytes++;
+		}
 	}
-	if (n < 0)
+	else
 	{
-		_putchar('-');
-		n *= -1;
-		bytes++;
-	}
-	s = n;
-        while ((n / 10) > 0)
-	{
-                cont++;
-                n /= 10;
-        }
-        cont++;
-	while (s != 0)
-	{
-		r = r * 10;
-		r = r + s % 10;
-		s = s / 10;
-		bytes++;
-	}
-	for (i = 0; i < cont; i++, r /= 10)
-        {
-                _putchar((r % 10) + '0');
-                bytes++;
+		return (-1);
 	}
 	return (bytes);
 }

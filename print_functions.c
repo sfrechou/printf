@@ -76,6 +76,7 @@ int printint(va_list arguments)
 	{
 		_putchar('-');
 		a = n * -1;
+		digitos++;
 	}
 	else
 	{

@@ -1,5 +1,5 @@
 #include "holberton.h"
-int _putchar(char c);
+
 /**
  * _printf - Entry point
  * @format: s
@@ -13,7 +13,7 @@ void _printf(const char * const format, ...)
 		{"s", printstring},
 		{"%", printpercent},
 		{"i", printint},
-		{"d", printdecimal},
+		{"d", printint},
 		{NULL, NULL}
 	};
 	int i, j, flag = 0;

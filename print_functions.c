@@ -64,25 +64,7 @@ void printint(va_list arguments)
 	_printint(n);
 
 }
-/**
- * printdecimal - Entry point
- * @list: d
- *
- *
- * Return: Always 0 (Success)
- */
-void printdecimal(va_list arguments)
-{
-	int n;
-	n = va_arg(arguments, int);
-	if (n < 0)
-	{
-		_putchar('-');
-		n *= -1;
-	}
-	_printint(n);
 
-}
 /**
  * _printint - Recursive function to print an int.
  * @n: int value of argument.

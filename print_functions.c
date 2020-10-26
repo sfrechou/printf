@@ -3,25 +3,25 @@
 /**
  * printchar - Entry point
  * @arguments: arguments for function.
- * @bytes: number of bytes.
  * Return: int.
  */
-int printchar(int bytes, va_list arguments)
+int printchar(va_list arguments)
 {
-	bytes += 1;
+	int bytes;
+
 	_putchar(va_arg(arguments, int));
+	bytes = 1;
 	return (bytes);
 }
 
 /**
  * printstring - Entry point
  * @arguments: arguments for function.
- * @bytes: number of bytes.
  * Return: int.
  */
-int printstring(int bytes, va_list arguments)
+int printstring(va_list arguments)
 {
-	int length, k;
+	int length, k, bytes;
 	char *string;
 
 	string = va_arg(arguments, char *);
@@ -37,13 +37,14 @@ int printstring(int bytes, va_list arguments)
 /**
  * printpercent - Entry point
  * @arguments: arguments for function.
- * @bytes: number of bytes.
  * Return: int.
  */
-int printpercent(int bytes, va_list arguments)
+int printpercent(va_list arguments)
 {
+	int bytes;
+
 	(void)arguments;
-	bytes += 1;
+	bytes = 1;
 	_putchar('%');
 	return (bytes);
 }
@@ -51,13 +52,13 @@ int printpercent(int bytes, va_list arguments)
 /**
  * printint - Entry point
  * @arguments: arguments for function.
- * @bytes: arguments for functions.
  * Return: int.
  */
-int printint(int bytes, va_list arguments)
+int printint(va_list arguments)
 {
-	int n;
+	int n, bytes;
 
+	bytes = 0;
 	n = va_arg(arguments, int);
 	if (n < 0)
 	{
@@ -65,7 +66,7 @@ int printint(int bytes, va_list arguments)
 		n *= -1;
 		bytes++;
 	}
-	_printint(n);
+	_printint(bytes, n);
 	return (bytes);
 }
 

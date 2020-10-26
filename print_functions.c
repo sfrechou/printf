@@ -6,7 +6,7 @@
  * @bytes: number of bytes.
  * Return: int.
  */
-void printchar(int bytes, va_list arguments)
+int printchar(int bytes, va_list arguments)
 {
 	bytes += 1;
 	_putchar(va_arg(arguments, int));
@@ -19,7 +19,7 @@ void printchar(int bytes, va_list arguments)
  * @bytes: number of bytes.
  * Return: int.
  */
-void printstring(int bytes, va_list arguments)
+int printstring(int bytes, va_list arguments)
 {
 	int length, k;
 	char *string;
@@ -40,7 +40,7 @@ void printstring(int bytes, va_list arguments)
  * @bytes: number of bytes.
  * Return: int.
  */
-void printpercent(int bytes, va_list arguments)
+int printpercent(int bytes, va_list arguments)
 {
 	(void)arguments;
 	bytes += 1;
@@ -54,7 +54,7 @@ void printpercent(int bytes, va_list arguments)
  * @bytes: arguments for functions.
  * Return: int.
  */
-void printint(int bytes, va_list arguments)
+int printint(int bytes, va_list arguments)
 {
 	int n;
 
@@ -73,9 +73,9 @@ void printint(int bytes, va_list arguments)
  * _printint - Recursive function to print an int.
  * @bytes: number of bytes.
  * @n: int value of argument.
- * Return: void.
+ * Return: int.
  */
-void _printint(int bytes, int n)
+int _printint(int bytes, int n)
 {
 	if ((n / 10) > 0)
 	{

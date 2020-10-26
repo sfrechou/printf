@@ -80,11 +80,10 @@ int _printint(int bytes, int n)
 {
 	if ((n / 10) > 0)
 	{
-		bytes++;
 		_printint(bytes, (n / 10));
+		bytes++;
 	}
 	bytes++;
-	_putchar((n % 10) + '0');
-	printf("Bytes en _printint %d\n", bytes);
+	bytes += _putchar((n % 10) + '0');
 	return (bytes);
 }

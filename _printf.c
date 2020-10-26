@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 				if(format[i + 1] == functions[j].caracter[0])
 				{
 					flag = 1;
-					functions[j].f(arguments);
+					functions[j].f(bytes, arguments);
 					break;
 				}
 				j++;

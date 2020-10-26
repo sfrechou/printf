@@ -21,12 +21,20 @@ int _printf(const char *format, ...)
 
 	va_start(arguments, format);
 	i = 0;
+	if (format == NULL)
+	{
+		return (-1);
+	}
 
 	while (format[i] != '\0')
 	{
 		flag = 0;
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == '\n')
+			{
+				return (-1);
+			}
 			while(functions[j].caracter != NULL)
 			{
 				if(format[i + 1] == functions[j].caracter[0])

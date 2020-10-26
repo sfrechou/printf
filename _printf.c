@@ -19,11 +19,11 @@ int _printf(const char *format, ...)
 	int bytes = 0;
 	va_list arguments;
 
-	va_start(arguments, format);
 	if (format == NULL)
 	{
 		return (-1);
 	}
+	va_start(arguments, format);
 	bytes += fortylines(format, arguments, functions);
 
 	va_end(arguments);

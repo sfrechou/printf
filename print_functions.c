@@ -2,26 +2,26 @@
 
 /**
  * printchar - Entry point
- * @list: d
- *
- *
- * Return: Always 0 (Success)
+ * @arguments: arguments for function.
+ * @bytes: number of bytes.
+ * Return: int.
  */
-void printchar(va_list arguments)
+void printchar(int bytes, va_list arguments)
 {
+	bytes += 1;
 	_putchar(va_arg(arguments, int));
+	return (bytes);
 }
 
 /**
  * printstring - Entry point
- * @list: d
- *
- *
- * Return: Always 0 (Success)
+ * @arguments: arguments for function.
+ * @bytes: number of bytes.
+ * Return: int.
  */
-void printstring(va_list arguments)
+void printstring(int bytes, va_list arguments)
 {
-        int length, k;
+	int length, k;
 	char *string;
 
 	string = va_arg(arguments, char *);
@@ -30,51 +30,58 @@ void printstring(va_list arguments)
 	{
 		_putchar(string[k]);
 	}
+	bytes = length;
+	return (bytes);
 }
 
 /**
  * printpercent - Entry point
- * @list: d
- *
- *
- * Return: Always 0 (Success)
+ * @arguments: arguments for function.
+ * @bytes: number of bytes.
+ * Return: int.
  */
-void printpercent(va_list arguments)
+void printpercent(int bytes, va_list arguments)
 {
 	(void)arguments;
+	bytes += 1;
 	_putchar('%');
+	return (bytes);
 }
 
 /**
  * printint - Entry point
- * @list: d
- *
- *
- * Return: Always 0 (Success)
+ * @arguments: arguments for function.
+ * @bytes: arguments for functions.
+ * Return: int.
  */
-void printint(va_list arguments)
+void printint(int bytes, va_list arguments)
 {
 	int n;
+
 	n = va_arg(arguments, int);
 	if (n < 0)
 	{
 		_putchar('-');
 		n *= -1;
+		bytes++;
 	}
 	_printint(n);
-
+	return (bytes);
 }
 
 /**
  * _printint - Recursive function to print an int.
+ * @bytes: number of bytes.
  * @n: int value of argument.
  * Return: void.
  */
-void _printint(int n)
+void _printint(int bytes, int n)
 {
-	if((n / 10) > 0)
+	if ((n / 10) > 0)
 	{
 		_printint(n / 10);
 	}
+	bytes++;
 	_putchar((n % 10) + '0');
+	return (bytes);
 }

@@ -66,7 +66,7 @@ int printint(va_list arguments)
 		n *= -1;
 		bytes++;
 	}
-	_printint(bytes, n);
+	bytes += _printint(bytes, n);
 	return (bytes);
 }
 

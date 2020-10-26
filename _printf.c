@@ -25,7 +25,6 @@ int _printf(const char *format, ...)
 	}
 	va_start(arguments, format);
 	bytes += fortylines(format, arguments, functions);
-
 	va_end(arguments);
 	return (bytes);
 }

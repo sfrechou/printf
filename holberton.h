@@ -14,6 +14,7 @@ void printint(va_list list);
 void _printint(int n);
 void printdecimal(va_list list);
 int _putchar(char c);
+int _strlen(char *s);
 void _printf(const char * const format, ...);
 
 /**

@@ -62,15 +62,15 @@ int printpercent(va_list arguments)
  */
 int printint(va_list arguments)
 {
-	int bytes = 0, i, j, digitos = 0, power, n, huevo = 0;
+	int i, j, digitos = 0, power, n, huevo = 0;
 	unsigned int a, b;
 
 	n = va_arg(arguments, int);
 	if (n == 0)
 	{
 		_putchar('0');
-		bytes++;
-		return (bytes);
+		digitos++;
+		return (digitos);
 	}
 	if (n < 0)
 	{
@@ -102,5 +102,5 @@ int printint(va_list arguments)
 	_putchar(b + '0');
 
 
-	return (bytes);
+	return (digitos + 1);
 }

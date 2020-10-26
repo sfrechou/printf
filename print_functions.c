@@ -90,7 +90,6 @@ int printint(va_list arguments)
 			r = r * 10;
 			r = r + s % 10;
 			s = s / 10;
-			bytes++;
 		}
 		for (i = 0; i < cont; i++, r /= 10)
 		{

@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 		flag = 0;
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == '\n')
+			if (format[i] == '%' && format[i + 1] == '\0')
 			{
 				return (-1);
 			}
@@ -60,7 +60,6 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			i++;
 			bytes++;
-			printf("%d\n", bytes);
 		}
 		j = 0;
 	}

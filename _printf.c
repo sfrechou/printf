@@ -16,15 +16,31 @@ int _printf(const char *format, ...)
 		{"d", printint},
 		{NULL, NULL}
 	};
-	int i, j, flag = 0, bytes = 0;
+	int bytes = 0;
 	va_list arguments;
 
 	va_start(arguments, format);
-	i = 0;
 	if (format == NULL)
 	{
 		return (-1);
 	}
+	bytes += fortylines(format, arguments, functions);
+
+	va_end(arguments);
+	return (bytes);
+}
+
+/**
+ * fortylines - Entry point
+ * @format: s
+ * @arguments: j
+ * @functions: f
+ *
+ * Return: Always 0 (Success)
+ */
+int fortylines(const char *format, va_list arguments, print_format *functions)
+{
+	int bytes = 0, i = 0, j = 0, flag = 0;
 
 	while (format[i] != '\0')
 	{
@@ -35,9 +51,9 @@ int _printf(const char *format, ...)
 			{
 				return (-1);
 			}
-			while(functions[j].caracter != NULL)
+			while (functions[j].caracter != NULL)
 			{
-				if(format[i + 1] == functions[j].caracter[0])
+				if (format[i + 1] == functions[j].caracter[0])
 				{
 					flag = 1;
 					bytes += functions[j].f(arguments);
@@ -63,6 +79,5 @@ int _printf(const char *format, ...)
 		}
 		j = 0;
 	}
-	va_end(arguments);
 	return (bytes);
 }

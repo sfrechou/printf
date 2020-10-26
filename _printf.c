@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 		{"d", printint},
 		{NULL, NULL}
 	};
-	int i, j, flag = 0;
+	int i, j, flag = 0, bytes = 0;
 	va_list arguments;
 
 	va_start(arguments, format);
@@ -42,16 +42,19 @@ int _printf(const char *format, ...)
 		if (flag == 1)
 		{
 			if (format[i + 1] == '\0' || format[i + 2] == '\0')
+			{
 				break;
+			}
 			i += 2;
 		}
 		else
 		{
 			_putchar(format[i]);
 			i++;
+			bytes++;
 		}
 		j = 0;
 	}
 	va_end(arguments);
-	return (0);
+	return (bytes);
 }

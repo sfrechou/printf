@@ -69,6 +69,7 @@ int printint(va_list arguments)
 	{
 		_putchar('0');
 		bytes++;
+		return (bytes);
 	}
 	if (n < 0)
 	{

@@ -62,7 +62,7 @@ int printpercent(va_list arguments)
  */
 int printint(va_list arguments)
 {
-	int i, s, n, bytes = 0, cont = 0;
+	int i, n, s, bytes = 0, cont = 0, r = 0;
 
 	n = va_arg(arguments, int);
 	if (n < 0)
@@ -72,17 +72,23 @@ int printint(va_list arguments)
 		bytes++;
 	}
 	s = n;
-	while ((n / 10) > 0)
+        while ((n / 10) > 0)
 	{
-		cont++;
-		n /= 10;
-	}
-	cont++;
-
-	for (i = 0; i < cont; i++, s /= 10)
+                cont++;
+                n /= 10;
+        }
+        cont++;
+	while (s != 0)
 	{
-		_putchar((s % 10) + '0');
+		r = r * 10;
+		r = r + s % 10;
+		s = s / 10;
 		bytes++;
+	}
+	for (i = 0; i < cont; i++, r /= 10)
+        {
+                _putchar((r % 10) + '0');
+                bytes++;
 	}
 	return (bytes);
 }

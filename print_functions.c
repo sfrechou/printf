@@ -65,7 +65,7 @@ int printint(va_list arguments)
 	int i, n, s, bytes = 0, cont = 0, r = 0;
 
 	n = va_arg(arguments, int);
-	if (n >= INT_MIN && n <= INT_MAX)
+	if (n > INT_MIN && n < INT_MAX)
 	{
 		if (n == 0)
 		{

@@ -14,7 +14,7 @@ void printint(va_list list);
 void _printint(int n);
 int _putchar(char c);
 int _strlen(char *s);
-void _printf(const char * const format, ...);
+int _printf(const char *format, ...);
 
 /**
  * struct gen_format - Struct op

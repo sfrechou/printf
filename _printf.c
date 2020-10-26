@@ -6,7 +6,7 @@
  *
  * Return: Always 0 (Success)
  */
-void _printf(const char * const format, ...)
+int _printf(const char *format, ...)
 {
 	print_format functions[] = {
 		{"c", printchar},
@@ -53,4 +53,5 @@ void _printf(const char * const format, ...)
 		j = 0;
 	}
 	va_end(arguments);
+	return (0);
 }

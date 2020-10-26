@@ -9,6 +9,9 @@ int printchar(va_list arguments)
 {
 	int bytes;
 
+	if (arguments == 0)
+		arguments = NULL;
+
 	_putchar(va_arg(arguments, int));
 	bytes = 1;
 	return (bytes);
@@ -21,16 +24,19 @@ int printchar(va_list arguments)
  */
 int printstring(va_list arguments)
 {
-	int length, k, bytes;
+	int k, bytes;
 	char *string;
 
 	string = va_arg(arguments, char *);
-	length = _strlen(string);
-	for (k = 0; k < length; k++)
+	if (string == '\0')
+	{
+		string = "(null)";
+	}
+	for (k = 0; string[k] != '\0'; k++)
 	{
 		_putchar(string[k]);
 	}
-	bytes = length;
+	bytes = k;
 	return (bytes);
 }
 

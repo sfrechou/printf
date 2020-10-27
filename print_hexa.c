@@ -106,7 +106,6 @@ int print_oct(va_list arguments)
 	unsigned int n, oct = 0;
 
 	n = va_arg(arguments, int);
-
 	while (n > 0)
 	{
 		oct += (n % 8) * power;

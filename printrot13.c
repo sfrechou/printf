@@ -37,7 +37,7 @@ int printrot13(va_list arguments)
 			bytes++;
 		}
 	}
-	return(bytes);
+	return (bytes);
 
 }
 

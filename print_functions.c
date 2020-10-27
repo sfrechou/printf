@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * printchar - Entry point
+ * printchar - Entry point - Function tha prints a character.
  * @arguments: arguments for function.
  * Return: int.
  */

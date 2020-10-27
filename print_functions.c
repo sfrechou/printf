@@ -41,8 +41,8 @@ int printstring(va_list arguments)
 }
 
 /**
- * printpercent - Entry point
- * @arguments: arguments for function.
+ * printpercent - Entry point - Function that prints the % character.
+ * @arguments: 
  * Return: int.
  */
 int printpercent(va_list arguments)

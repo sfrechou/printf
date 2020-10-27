@@ -49,7 +49,7 @@ int print_hexa(va_list arguments)
 
 /**
  * print_hexax - Entry point - Function that prints hexadecimals (lowercase).
- * @arguments: arguments for function.
+ * @arguments: number that will be converted to hexadecimal.
  * Return: int.
  */
 int print_hexax(va_list arguments)

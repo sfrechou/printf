@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
  * @arguments: arguments that will replace format specifiers.
  * @functions: structure to access functions, according to character assigned.
  *
- * Return: Always 0 (Success)
+ * Return: number of characters printed.
  */
 int fortylines(const char *format, va_list arguments, print_format *functions)
 {

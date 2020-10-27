@@ -21,6 +21,7 @@ int _printf(const char *format, ...)
 		{"u", print_uns},
 		{"R", printrot13},
 		{"r", revstring},
+		{"S", printnon_printable},
 		{NULL, NULL}
 	};
 	int bytes = 0;

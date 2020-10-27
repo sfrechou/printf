@@ -15,6 +15,8 @@ int _printf(const char *format, ...)
 		{"i", printint},
 		{"d", printint},
 		{"b", print_bin},
+		{"x", print_hexa},
+		{"X", print_hexax},
 		{NULL, NULL}
 	};
 	int bytes = 0;

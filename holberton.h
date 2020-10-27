@@ -25,6 +25,8 @@ int printstring(va_list list);
 int printpercent(va_list list);
 int printint(va_list list);
 int print_bin(va_list list);
+int print_hexa(va_list list);
+int print_hexax(va_list list);
 int _putchar(char c);
 int _strlen(char *s);
 int _printf(const char *format, ...);

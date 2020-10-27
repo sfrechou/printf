@@ -2,7 +2,7 @@
 
 /**
  * print_hexa - Entry point - Function that prints hexadecimals.
- * @arguments: arguments for function.
+ * @arguments: arguments that will replace format specifiers.
  * Return: int.
  */
 int print_hexa(va_list arguments)

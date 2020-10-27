@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * alloc_grid - Entry point
- * @width: s
- * @height: s
+ * print_bin - Entry point
+ * @arguments: s
+ *
  *
  * Return: Always 0 (Success)
  */
@@ -25,5 +25,5 @@ int print_bin(va_list arguments)
 	{
 		_putchar(binarray[j] + '0');
 	}
-	return (bytes);
+	return (bytes + 1);
 }

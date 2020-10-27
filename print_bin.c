@@ -9,11 +9,20 @@
  */
 int print_bin(va_list arguments)
 {
-	int n, i = 0, j, bytes = 0;
+	int i = 0, j, bytes = 0, m;
 	int binarray[32];
+	unsigned int n;
 
-	n = va_arg(arguments, int);
+	m = va_arg(arguments, int);
 
+	if (m < 0)
+	{
+		n = m * -1;
+	}
+	else
+	{
+		n = m;
+	}
 	while (n > 0)
 	{
 		binarray[i] = n % 2;

@@ -2,7 +2,7 @@
 
 /**
  * _printf - Entry point - Main function that formats and prints data.
- * @format: s
+ * @format: format string that specifies how arguments are converted for output.
  *
  * Return: number of characters printed.
  */
@@ -37,9 +37,9 @@ int _printf(const char *format, ...)
 }
 
 /**
- * fortylines - Entry point
- * @format: s
- * @arguments: j
+ * fortylines - Entry point - Function to get number of characters printed.
+ * @format: format string that specifies how arguments are converted for output.
+ * @arguments: arguments that will replace format specifiers.
  * @functions: f
  *
  * Return: Always 0 (Success)

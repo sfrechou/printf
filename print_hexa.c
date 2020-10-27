@@ -26,6 +26,10 @@ int print_hexa(va_list arguments)
 		n /= 10;
 	}
 	array = malloc(digitos + sizeof(char));
+	if (array == NULL)
+	{
+		return (-1);
+	}
 	while (quotient != 0)
 	{
 		remainder = quotient % 16;
@@ -76,6 +80,10 @@ int print_hexax(va_list arguments)
 		n /= 10;
 	}
 	array = malloc(digitos * sizeof(char));
+	if (array == NULL)
+	{
+		return (-1);
+	}
 	while (quotient != 0)
 	{
 		remainder = quotient % 16;

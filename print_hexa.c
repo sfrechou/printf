@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_hexa - Entry point - Function that prints hexadecimals.
+ * print_hexa - Entry point - Function that prints hexadecimals (uppercase).
  * @arguments: arguments that will replace format specifiers.
  * Return: number of characters printed.
  */

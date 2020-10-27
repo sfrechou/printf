@@ -48,7 +48,7 @@ int print_hexa(va_list arguments)
 }
 
 /**
- * print_hexax - Entry point
+ * print_hexax - Entry point - Function that prints hexadecimals (lowercase).
  * @arguments: arguments for function.
  * Return: int.
  */

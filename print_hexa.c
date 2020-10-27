@@ -3,7 +3,7 @@
 /**
  * print_hexa - Entry point - Function that prints hexadecimals.
  * @arguments: arguments that will replace format specifiers.
- * Return: int.
+ * Return: number of characters printed.
  */
 int print_hexa(va_list arguments)
 {

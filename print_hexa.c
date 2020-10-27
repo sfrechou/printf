@@ -2,7 +2,7 @@
 
 /**
  * print_hexa - Entry point - Function that prints hexadecimals (uppercase).
- * @arguments: arguments that will replace format specifiers.
+ * @arguments: number that will be converted to hexadecimal.
  * Return: number of characters printed.
  */
 int print_hexa(va_list arguments)

@@ -20,6 +20,7 @@ int _printf(const char *format, ...)
 		{"o", print_oct},
 		{"u", print_uns},
 		{"R", printrot13},
+		{"r", revstring},
 		{NULL, NULL}
 	};
 	int bytes = 0;

@@ -40,3 +40,29 @@ int printrot13(va_list arguments)
 	return(bytes);
 
 }
+
+/**
+ * revstring - Entry point - prints the reversed string
+ * @arguments: arguments from va_list passed to _printf
+ *
+ *
+ * Return: Always 0 (Success)
+ */
+int revstring(va_list arguments)
+{
+	char *string = va_arg(arguments, char *);
+	int length, i, bytes = 0;
+
+	if (string == NULL)
+	{
+		return (-1);
+	}
+
+	length = _strlen(string);
+	for (i = length - 1; i >= 0; i--)
+	{
+		_putchar(string[i]);
+		bytes++;
+	}
+	return (bytes);
+}

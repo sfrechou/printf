@@ -9,25 +9,17 @@
  */
 int print_bin(va_list arguments)
 {
-	int i = 0, j, bytes = 0, m;
-	int binarray[32];
+	int i = 0, j, bytes = 0;
+	int binarray[100];
 	unsigned int n;
 
-	m = va_arg(arguments, int);
+	n = va_arg(arguments, int);
 
-	if (m == 0)
+	if (n == 0)
 	{
 		_putchar('0');
 		bytes++;
 		return (bytes);
-	}
-	if (m < 0)
-	{
-		n = m * -1;
-	}
-	else
-	{
-		n = m;
 	}
 	while (n > 0)
 	{
@@ -35,6 +27,10 @@ int print_bin(va_list arguments)
 		n = n / 2;
 		bytes++;
 		i++;
+	}
+	if (i > 32)
+	{
+		return (-1);
 	}
 	for (j = i - 1; j >= 0; j--)
 	{

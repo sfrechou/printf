@@ -42,8 +42,6 @@ int printrot13(va_list arguments)
 /**
  * revstring - Entry point - prints the reversed string
  * @arguments: arguments from va_list passed to _printf
- *
- *
  * Return: Always 0 (Success)
  */
 int revstring(va_list arguments)

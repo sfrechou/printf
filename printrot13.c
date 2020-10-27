@@ -1,5 +1,12 @@
 #include "holberton.h"
-
+/**
+ * printrot13 - Entry point - prints the rot13'ed string
+ * @arguments: arguments from va_list passed to _printf
+ * Return: number of characters printed.
+ */
+int printnon_printable(va list arguments)
+{
+}
 /**
  * printrot13 - Entry point - prints the rot13'ed string
  * @arguments: arguments from va_list passed to _printf

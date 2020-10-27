@@ -2,8 +2,7 @@
 
 /**
  * _putchar - writes the character c to stdout
- * @c: The character to print
- *
+ * @c: The character to print.
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
@@ -13,10 +12,9 @@ int _putchar(char c)
 }
 
 /**
- * _strlen - Entry point
- * @s: d
- *
- * Return: Always 0 (Success)
+ * _strlen - Entry point - Function that counts the number of characters.
+ * @s: string of characters.
+ * Return: length.
  */
 int _strlen(char *s)
 {

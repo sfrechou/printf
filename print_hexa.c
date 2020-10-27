@@ -96,7 +96,7 @@ int print_hexax(va_list arguments)
 
 
 /**
- * print_oct - Entry point
+ * print_oct - Entry point - Function that prints octal numbers.
  * @arguments: arguments for function.
  * Return: int.
  */

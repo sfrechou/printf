@@ -13,6 +13,12 @@ int print_hexa(va_list arguments)
 	char array[100];
 
 	n = va_arg(arguments, int);
+	if (n == 0)
+	{
+		_putchar('0');
+		bytes++;
+		return (0);
+	}
 	quotient = n;
 
 	while (quotient != 0)
@@ -51,6 +57,13 @@ int print_hexax(va_list arguments)
 	char array[100];
 
 	n = va_arg(arguments, int);
+
+	if (n == 0)
+	{
+		_putchar('0');
+		bytes++;
+		return (bytes);
+	}
 	quotient = n;
 	while (quotient != 0)
 	{

@@ -17,7 +17,7 @@ int print_hexa(va_list arguments)
 	{
 		_putchar('0');
 		bytes++;
-		return (0);
+		return (bytes);
 	}
 	quotient = n;
 	while ((n / 10) != 0)

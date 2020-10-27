@@ -130,7 +130,7 @@ int print_oct(va_list arguments)
 /**
  * print_uns - Entry point - Function that prints unsigned integers.
  * @arguments: number that will be "converted" to unsigned int.
- * Return: 
+ * Return: number of characters printed.
  */
 int print_uns(va_list arguments)
 {

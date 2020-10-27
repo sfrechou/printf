@@ -98,7 +98,7 @@ int print_hexax(va_list arguments)
 /**
  * print_oct - Entry point - Function that prints octal numbers.
  * @arguments: number that will be converted to octal numbers.
- * Return: int.
+ * Return: number of characters printed.
  */
 int print_oct(va_list arguments)
 {

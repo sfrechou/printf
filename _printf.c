@@ -38,7 +38,7 @@ int _printf(const char *format, ...)
 
 /**
  * fortylines - Entry point - Function to get number of characters printed.
- * @format: format string that specifies how arguments are converted for output.
+ * @format: format string that specifies format to arguments.
  * @arguments: arguments that will replace format specifiers.
  * @functions: structure to access functions, according to character assigned.
  * Return: number of characters printed.

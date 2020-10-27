@@ -14,6 +14,7 @@ int _printf(const char *format, ...)
 		{"%", printpercent},
 		{"i", printint},
 		{"d", printint},
+		{"b", print_bin},
 		{NULL, NULL}
 	};
 	int bytes = 0;

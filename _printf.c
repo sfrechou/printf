@@ -19,6 +19,7 @@ int _printf(const char *format, ...)
 		{"X", print_hexax},
 		{"o", print_oct},
 		{"u", print_uns},
+		{"R", printrot13},
 		{NULL, NULL}
 	};
 	int bytes = 0;

@@ -29,6 +29,7 @@ int print_hexa(va_list list);
 int print_hexax(va_list list);
 int print_oct(va_list list);
 int print_uns(va_list list);
+int printrot13(va_list list);
 int _putchar(char c);
 int _strlen(char *s);
 int _printf(const char *format, ...);

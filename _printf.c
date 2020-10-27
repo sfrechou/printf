@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- * _printf - Entry point
+ * _printf - Entry point - Main function that formats and prints data.
  * @format: s
  *
- * Return: Always 0 (Success)
+ * Return: number of characters printed.
  */
 int _printf(const char *format, ...)
 {

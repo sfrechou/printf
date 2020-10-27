@@ -2,7 +2,7 @@
 
 /**
  * _printf - Entry point - Main function that formats and prints data.
- * @format: format string that specifies how arguments are converted for output.
+ * @format: format string that specifies format to arguments.
  *
  * Return: number of characters printed.
  */

@@ -3,7 +3,7 @@
 /**
  * printrot13 - Entry point - prints the rot13'ed string
  * @arguments: arguments from va_list passed to _printf
- * Return: Always 0 (Success)
+ * Return: number of characters printed.
  */
 int printrot13(va_list arguments)
 {

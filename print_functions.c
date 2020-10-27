@@ -3,7 +3,7 @@
 /**
  * printchar - Entry point - Function tha prints a character.
  * @arguments: arguments that will replace format specifiers.
- * Return: int.
+ * Return: number of characters printed.
  */
 int printchar(va_list arguments)
 {

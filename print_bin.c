@@ -15,6 +15,12 @@ int print_bin(va_list arguments)
 
 	m = va_arg(arguments, int);
 
+	if (m == 0)
+	{
+		_putchar('0');
+		bytes++;
+		return (bytes);
+	}
 	if (m < 0)
 	{
 		n = m * -1;

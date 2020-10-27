@@ -87,24 +87,55 @@ int print_oct(va_list arguments)
 
 	n = va_arg(arguments, int);
 
-	while (n != 0)
+	while (n > 0)
 	{
 		oct += (n % 8) * power;
 		n /= 8;
-		power *= 10;
+		power *= 8;
 		bytes++;
 	}
-	for (i = 1; i < bytes; i++)
+	for (i = 1; i <= bytes; i++)
 	{
 		pwr = 1;
 		for (j = i; j < bytes; j++)
 		{
-			pwr *= 10;
+			pwr *= 8;
 		}
 		new = oct / pwr;
 		oct = oct - (new * pwr);
 		_putchar(new + '0');
 	}
-	_putchar(new + '0');
 	return (bytes);
+}
+
+/**
+ * print_uns - Entry point
+ * @arguments: arguments for function.
+ * Return: int.
+ */
+int print_uns(va_list arguments)
+{
+	int i, j, digitos = 0, power, huevo = 0;
+	unsigned int a, n;
+
+	n = va_arg(arguments, int);
+	a = n;
+	while ((a / 10) != 0)
+	{
+		digitos++;
+		a /= 10;
+	}
+	for (i = 1; i <= digitos; i++)
+	{
+		power = 1;
+		for (j = i - 1; j < digitos; j++)
+		{
+			power = power * 10;
+		}
+		huevo = n / power;
+		n = n - (huevo * power);
+		_putchar(huevo + '0');
+	}
+	_putchar(n + '0');
+	return (digitos + 1);
 }

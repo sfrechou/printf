@@ -2,7 +2,7 @@
 
 /**
  * printchar - Entry point - Function tha prints a character.
- * @arguments: arguments for function.
+ * @arguments: arguments that will replace format specifiers.
  * Return: int.
  */
 int printchar(va_list arguments)

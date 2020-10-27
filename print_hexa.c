@@ -8,9 +8,9 @@
 int print_hexa(va_list arguments)
 {
 	unsigned int n, quotient;
-	int remainder;
+	int remainder, digitos = 0;
 	int i, j = 0, bytes = 0;
-	char array[100];
+	char *array;
 
 	n = va_arg(arguments, int);
 	if (n == 0)
@@ -20,7 +20,12 @@ int print_hexa(va_list arguments)
 		return (0);
 	}
 	quotient = n;
-
+	while ((n / 10) != 0)
+	{
+		digitos++;
+		n /= 10;
+	}
+	array = malloc(digitos + sizeof(char));
 	while (quotient != 0)
 	{
 		remainder = quotient % 16;
@@ -40,7 +45,7 @@ int print_hexa(va_list arguments)
 	{
 		_putchar(array[i]);
 	}
-
+	free(array);
 	return (bytes);
 }
 
@@ -52,9 +57,9 @@ int print_hexa(va_list arguments)
 int print_hexax(va_list arguments)
 {
 	unsigned int n, quotient;
-	int remainder;
+	int remainder, digitos = 0;
 	int i, j = 0, bytes = 0;
-	char array[100];
+	char *array;
 
 	n = va_arg(arguments, int);
 
@@ -65,6 +70,12 @@ int print_hexax(va_list arguments)
 		return (bytes);
 	}
 	quotient = n;
+	while ((n / 10) != 0)
+	{
+		digitos++;
+		n /= 10;
+	}
+	array = malloc(digitos * sizeof(char));
 	while (quotient != 0)
 	{
 		remainder = quotient % 16;
@@ -84,6 +95,7 @@ int print_hexax(va_list arguments)
 	{
 		_putchar(array[i]);
 	}
+	free(array);
 	return (bytes);
 }
 

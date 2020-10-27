@@ -18,7 +18,7 @@ int printchar(va_list arguments)
 }
 
 /**
- * printstring - Entry point
+ * printstring - Entry point - Function that prints strings.
  * @arguments: arguments for function.
  * Return: int.
  */

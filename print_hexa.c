@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_hexa - Entry point
+ * print_hexa - Entry point - Function that prints hexadecimals.
  * @arguments: arguments for function.
  * Return: int.
  */

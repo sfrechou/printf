@@ -34,5 +34,5 @@ int print_bin(va_list arguments)
 	{
 		_putchar(binarray[j] + '0');
 	}
-	return (bytes + 1);
+	return (bytes);
 }

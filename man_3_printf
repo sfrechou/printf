@@ -143,6 +143,7 @@ _printf("%R\n", "ROT13");
 
 # EBG13
 
+.B --- Print non-printable characters in hexadecimal.
 
 .SH SEE ALSO
 man page printf(3).

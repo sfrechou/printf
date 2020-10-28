@@ -56,6 +56,7 @@ ust correspond properly (after type promotion) with the conversion specifier.
 - Converts to ROT13
 
 .B %S
+- Prints non-printable characters in hexadecimal
 
 .SH EXAMPLES
 .B --- Print a single character 'h' followed by a newline:

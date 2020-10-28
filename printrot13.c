@@ -25,9 +25,9 @@ int printnon_printable(va_list arguments)
 			n = array[i];
 			i++;
 			quotient = n;
-			remainder = quotient % 16;
 			while (quotient != 0)
 			{
+				remainder = quotient % 16;
 				if (remainder < 10)
 				{
 					_putchar(48);

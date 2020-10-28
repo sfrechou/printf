@@ -9,7 +9,7 @@ int printnon_printable(va_list arguments)
 {
 	char *array = va_arg(arguments, char *);
 	int i, bytes = 0;
-	unsigned int n, remainder, quotient;
+	unsigned int n, quotient;
 
 	if (array == '\0')
 	{
@@ -22,25 +22,21 @@ int printnon_printable(va_list arguments)
 			_putchar('\\');
 			_putchar('x');
 			bytes += 2;
-			n = array[i];
 			i++;
+			n = array[i];
 			quotient = n;
-			while (quotient != 0)
-			{
-				remainder = quotient % 16;
-				if (remainder < 10)
+				if ((quotient / 16) > 9)
 				{
-					_putchar(48);
-					_putchar(48 + remainder);
-					bytes++;
+					_putchar(48 + (quotient / 16));
+					_putchar(55 + (quotient % 16));
+					bytes += 2;
 				}
 				else
 				{
-					_putchar(55 + remainder);
+					_putchar(48);
+					_putchar(48 + (quotient % 16));
 					bytes += 2;
 				}
-				quotient /= 16;
-			}
 		}
 		_putchar(array[i]);
 		bytes++;

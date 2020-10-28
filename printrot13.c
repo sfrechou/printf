@@ -1,11 +1,27 @@
 #include "holberton.h"
+
 /**
  * printrot13 - Entry point - prints the rot13'ed string
  * @arguments: arguments from va_list passed to _printf
  * Return: number of characters printed.
  */
-int printnon_printable(va list arguments)
+int printnon_printable(va_list arguments)
 {
+	char *array = va_arg(arguments, char *);
+	int i;
+
+	for (i = 0; array[i] != '\0'; i++)
+	{
+		if ((array[i] >= 0 && array[i] < 32) || array[i] >= 127)
+		{
+			_putchar('\\');
+			_putchar('x');
+			_putchar(array[i]);
+			i++;
+		}
+		_putchar(array[i]);
+	}
+	return (0);
 }
 /**
  * printrot13 - Entry point - prints the rot13'ed string

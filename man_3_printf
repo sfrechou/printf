@@ -49,6 +49,13 @@ ust correspond properly (after type promotion) with the conversion specifier.
 .B %%
 - Prints a single %
 
+.B %r
+- Reverses a string
+
+.B %R
+- Converts to ROT13
+
+
 .SH EXAMPLES
 .B --- Print a single character 'h' followed by a newline:
 
@@ -120,6 +127,20 @@ _printf ("Two separate\\nlines\\n");
 _printf("%%\\n");
 
 # %
+
+.B --- Print a string in reverse followed by a new line.
+
+_printf("%r\n", "Hello");
+
+# olleH
+
+
+.B --- Print a string converted to ROT13 followed by a new line.
+
+_printf("%R\n", "ROT13");
+
+# EBG13
+
 
 .SH SEE ALSO
 man page printf(3).

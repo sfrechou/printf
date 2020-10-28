@@ -25,17 +25,17 @@ int printnon_printable(va_list arguments)
 			n = array[i];
 			i++;
 			quotient = n;
-			remainder = quotient % 16;
 			while (quotient != 0)
 			{
+				remainder = quotient % 16;
 				if (remainder < 10)
 				{
+					_putchar(48);
 					_putchar(48 + remainder);
 					bytes++;
 				}
 				else
 				{
-					_putchar(48);
 					_putchar(55 + remainder);
 					bytes += 2;
 				}

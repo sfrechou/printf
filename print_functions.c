@@ -19,7 +19,7 @@ int printchar(va_list arguments)
 
 /**
  * printstring - Entry point - Function that prints strings.
- * @arguments: arguments for function.
+ * @arguments: arguments that will replace format specifiers.
  * Return: numbers of characters printed.
  */
 int printstring(va_list arguments)

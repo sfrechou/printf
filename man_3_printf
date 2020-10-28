@@ -55,6 +55,7 @@ ust correspond properly (after type promotion) with the conversion specifier.
 .B %R
 - Converts to ROT13
 
+.B %S
 
 .SH EXAMPLES
 .B --- Print a single character 'h' followed by a newline:

@@ -11,6 +11,10 @@ int printnon_printable(va_list arguments)
 	int i, bytes = 0;
 	unsigned int n, remainder, quotient;
 
+	if (array == NULL)
+	{
+		return (-1);
+	}
 	for (i = 0; array[i] != '\0'; i++)
 	{
 		if ((array[i] >= 0 && array[i] < 32) || array[i] >= 127)

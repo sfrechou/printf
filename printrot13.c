@@ -30,12 +30,12 @@ int printnon_printable(va_list arguments)
 			{
 				if (remainder < 10)
 				{
+					_putchar(48);
 					_putchar(48 + remainder);
 					bytes++;
 				}
 				else
 				{
-					_putchar(48);
 					_putchar(55 + remainder);
 					bytes += 2;
 				}

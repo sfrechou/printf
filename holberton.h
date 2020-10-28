@@ -10,7 +10,6 @@
 
 /**
  * struct gen_format - Struct op base
- *
  * @caracter: The operator
  * @f: The function associated
  */

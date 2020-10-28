@@ -11,7 +11,7 @@
 /**
  * struct gen_format - Struct op base
  * @caracter: The operator
- * @f: The function associated
+ * @f: The function associated to the operator.
  */
 typedef struct gen_format
 {

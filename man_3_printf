@@ -132,20 +132,24 @@ _printf("%%\\n");
 
 .B --- Print a string in reverse followed by a new line.
 
-_printf("%r\n", "Hello");
+_printf("%r\\n", "Hello");
 
 # olleH
 
 
 .B --- Print a string converted to ROT13 followed by a new line.
 
-_printf("%R\n", "ROT13");
+_printf("%R\\n", "ROT13");
 
 # EBG13
 
 .B --- Print non-printable characters in hexadecimal followed by a new line.
 
-_printf("%S\n", "Holberton\\nSchool);
+_printf("%S\\n", "Holberton\\nSchool");
+
+# Holberton\\x0ASchool
+
+
 .SH SEE ALSO
 man page printf(3).
 

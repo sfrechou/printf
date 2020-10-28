@@ -7,15 +7,15 @@
  */
 int printnon_printable(va_list arguments)
 {
-	char *array = va_arg(arguments, char *);
-	int i, bytes = 0;
+	char *array = va_arg(arguments, int);
+	int i = 0, bytes = 0;
 	unsigned int n, quotient;
 
 	if (array == '\0')
 	{
 		return (-1);
 	}
-	for (i = 0; array[i] != '\0'; i++)
+	while (array[i] != '\0')
 	{
 		if ((array[i] > 0 && array[i] < 32) || array[i] >= 127)
 		{
@@ -36,12 +36,15 @@ int printnon_printable(va_list arguments)
 					_putchar(48 + (quotient % 16));
 					bytes += 2;
 				}
-				i++;
 		}
-		_putchar(array[i]);
-		bytes++;
+		else
+		{
+			_putchar(array[i]);
+			bytes++;
+		}
+		i++;
 	}
-	return (bytes);
+	return (bytes + 1);
 }
 /**
  * printrot13 - Entry point - prints the rot13'ed string

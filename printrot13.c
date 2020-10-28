@@ -44,7 +44,7 @@ int printnon_printable(va_list arguments)
 		}
 		i++;
 	}
-	return (bytes + 1);
+	return (bytes);
 }
 /**
  * printrot13 - Entry point - prints the rot13'ed string

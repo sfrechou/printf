@@ -11,13 +11,13 @@ int printnon_printable(va_list arguments)
 	int i, bytes = 0;
 	unsigned int n, remainder, quotient;
 
-	if (array == NULL)
+	if (array == '\0')
 	{
 		return (-1);
 	}
 	for (i = 0; array[i] != '\0'; i++)
 	{
-		if ((array[i] >= 0 && array[i] < 32) || array[i] >= 127)
+		if ((array[i] > 0 && array[i] < 32) || array[i] >= 127)
 		{
 			_putchar('\\');
 			_putchar('x');
@@ -45,7 +45,7 @@ int printnon_printable(va_list arguments)
 		_putchar(array[i]);
 		bytes++;
 	}
-	return (bytes + 1);
+	return (bytes);
 }
 /**
  * printrot13 - Entry point - prints the rot13'ed string

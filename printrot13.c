@@ -22,10 +22,9 @@ int printnon_printable(va_list arguments)
 			_putchar('\\');
 			_putchar('x');
 			bytes += 2;
-			i++;
 			n = array[i];
 			quotient = n;
-				if ((quotient / 16) > 9)
+				if (quotient > 9)
 				{
 					_putchar(48 + (quotient / 16));
 					_putchar(55 + (quotient % 16));
@@ -37,6 +36,7 @@ int printnon_printable(va_list arguments)
 					_putchar(48 + (quotient % 16));
 					bytes += 2;
 				}
+				i++;
 		}
 		_putchar(array[i]);
 		bytes++;

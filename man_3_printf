@@ -143,8 +143,9 @@ _printf("%R\n", "ROT13");
 
 # EBG13
 
-.B --- Print non-printable characters in hexadecimal.
+.B --- Print non-printable characters in hexadecimal followed by a new line.
 
+_printf("%S\n", "Holberton\\nSchool);
 .SH SEE ALSO
 man page printf(3).
 
